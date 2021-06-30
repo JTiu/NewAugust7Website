@@ -1,0 +1,151 @@
+﻿@model Box_Themis_Capstone.Models.ScoreCard
+@{
+    ViewData["Title"] = "JudgeBout";
+}
+
+
+
+<style>
+    .CenterTextColumn {
+        text-align: center
+    }
+</style>
+
+<h1 style="text-align:center">Let's Judge</h1>
+<div class="picture" style=" background-color: #F20519; margin:20px; padding: 20px;  border: 10px dashed black; color: white; text-align:center">
+
+    <h4><center>Your Boxing Scorecard</center></h4>
+    <hr />
+
+    <iframe width="342" height="315" src="@ViewBag.Url" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    @*<iframe width="342" height="315" src="https://www.youtube.com/embed/5n6rBEYGNvQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="342" height="315" src="https://www.youtube.com/embed/YpOV57hEkkI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>*@
+    <!--<iframe width="342" height="315" src="https://www.youtube.com/embed/3guJ7X3p3bk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+    <form asp-action="Create">
+        <!--this is where the form sends the info , if i need to check, view page source on the right click-->
+        <input asp-for="FightId" type="hidden" value="@ViewBag.FightId" />
+        <center>
+            <table>
+                <tr>
+                    <th class="CenterTextColumn">boxer 1</th>
+                    <th>Round</th>
+                    <th class="CenterTextColumn">boxer 2</th>
+                </tr>
+                <tr>
+                    <td><input asp-for="Round_1_B1" class="form-control" /></td>
+                    <td class="CenterTextColumn">1</td>
+                    <td><input asp-for="Round_1_B2" class="form-control" /></td>
+                </tr>
+                <tr>
+                    <td><input asp-for="Round_2_B1" class="form-control" /></td>
+                    <td class="CenterTextColumn">2</td>
+                    <td><input asp-for="Round_2_B2" class="form-control" /></td>
+                </tr>
+                <tr>
+                    <td><input asp-for="Round_3_B1" class="form-control" /></td>
+                    <td class="CenterTextColumn">3</td>
+                    <td><input asp-for="Round_3_B2" class="form-control" /></td>
+                </tr>
+                <tr>
+                    <td><input asp-for="Round_4_B1" class="form-control" /></td>
+                    <td class="CenterTextColumn">4</td>
+                    <td><input asp-for="Round_4_B2" class="form-control" /></td>
+                </tr>
+                <tr>
+                    <td><input asp-for="Round_5_B1" class="form-control" /></td>
+                    <td class="CenterTextColumn">5</td>
+                    <td><input asp-for="Round_5_B2" class="form-control" /></td>
+                </tr>
+                <tr>
+                    <td><input asp-for="Round_6_B1" class="form-control" /></td>
+                    <td class="CenterTextColumn">6</td>
+                    <td><input asp-for="Round_6_B2" class="form-control" /></td>
+                </tr>
+                <tr>
+                    <td><input asp-for="Round_7_B1" class="form-control" /></td>
+                    <td class="CenterTextColumn">7</td>
+                    <td><input asp-for="Round_7_B2" class="form-control" /></td>
+                </tr>
+                <tr>
+                    <td><input asp-for="Round_8_B1" class="form-control" /></td>
+                    <td class="CenterTextColumn">8</td>
+                    <td><input asp-for="Round_8_B2" class="form-control" /></td>
+                </tr>
+                <tr>
+                    <td><input asp-for="Round_9_B1" class="form-control" /></td>
+                    <td class="CenterTextColumn">9</td>
+                    <td><input asp-for="Round_9_B2" class="form-control" /></td>
+                </tr>
+                <tr>
+                    <td><input asp-for="Round_10_B1" class="form-control" /></td>
+                    <td class="CenterTextColumn">10</td>
+                    <td><input asp-for="Round_10_B2" class="form-control" /></td>
+                </tr>
+                <tr>
+                    <td><input asp-for="Round_11_B1" class="form-control" /></td>
+                    <td class="CenterTextColumn">11</td>
+                    <td><input asp-for="Round_11_B2" class="form-control" /></td>
+                </tr>
+                <tr>
+                    <td><input asp-for="Round_12_B1" class="form-control" /></td>
+                    <td class="CenterTextColumn">12</td>
+                    <td><input asp-for="Round_12_B2" class="form-control" /></td>
+                </tr>
+            </table>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </center>
+    </form>
+</div>
+
+@*e R Here
+<form asp-action="PickFightPage_Schedule_Zoom">
+    <input type="submit" value="Schedule Meeting Now" class="btn btn-primary" />
+</form>*@
+
+
+
+
+<div class="audio-container">
+    <div style="margin:20px; padding:20px; border: 5px dashed black; background-color:aqua">
+        <h3 style="text-align: center">Zoom Participation with a Senior Judge</h3>
+        <p style="text-align: center"><span id="dots"></span><span id="moreA">&nbsp; &nbsp;You can get assistance with all aspects of this interactive training program--future iterations of this site will feature a live, in-app Zoom link. Watch the clip below before, and this feature will be available soon!</span></p>
+        @if (TempData["Start"] == null)
+        {
+            <center>
+                <form asp-action="PickFightPage_Schedule_Zoom">
+                    <input type="submit" value="Request Immediate Meeting" class="btn btn-primary" />
+                </form>
+            </center>
+        }
+        else
+        {
+            <center> <a href="@TempData["Start"]">Start This Meeting</a></center>
+        }
+    </div>
+</div>
+
+<a asp-action="Index">Back to Home</a>
+</div>
+<script>
+    function myFunctionA() {
+        var dots = document.getElementById("dots");
+        var moreText = document.getElementById("moreA");
+        var btnText = document.getElementById("myBtnA");
+
+        if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "Read more";
+            moreText.style.display = "none";
+        } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "Read less";
+            moreText.style.display = "inline";
+        }
+    }
+</script>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

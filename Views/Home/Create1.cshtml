@@ -1,0 +1,104 @@
+﻿@model Box_Themis_Capstone.Models.ScoreCard
+@{
+    ViewData["Title"] = "Create";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to create.</p>
+<style>
+    .CenterTextColumn {
+        text-align: center
+    }
+</style>
+
+
+<h1><center>Let's Judge!</center></h1><!--check link-->
+<h4><center>Your Boxing Scorecard</center></h4>
+<hr />
+<iframe width="342" height="315" src="https://www.youtube.com/embed/IATUT2qzDmU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="342" height="315" src="https://www.youtube.com/embed/5n6rBEYGNvQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="342" height="315" src="https://www.youtube.com/embed/YpOV57hEkkI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<!--<iframe width="342" height="315" src="https://www.youtube.com/embed/3guJ7X3p3bk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+<form asp-action="Create">
+    <center>
+        <table>
+            <tr>
+                <th class="CenterTextColumn">boxer 1</th>
+                <th>Round</th>
+                <th class="CenterTextColumn">boxer2</th>
+            </tr>
+            <tr>
+                <td><input asp-for="Round_1_B1" class="form-control" /></td>
+                <td class="CenterTextColumn">1</td>
+                <td><input asp-for="Round_1_B2" class="form-control" /></td>
+            </tr>
+            <tr>
+                <td><input asp-for="Round_2_B1" class="form-control" /></td>
+                <td class="CenterTextColumn">2</td>
+                <td><input asp-for="Round_2_B2" class="form-control" /></td>
+            </tr>
+            <tr>
+                <td><input asp-for="Round_3_B1" class="form-control" /></td>
+                <td class="CenterTextColumn">3</td>
+                <td><input asp-for="Round_3_B2" class="form-control" /></td>
+            </tr>
+            <tr>
+                <td><input asp-for="Round_4_B1" class="form-control" /></td>
+                <td class="CenterTextColumn">4</td>
+                <td><input asp-for="Round_4_B2" class="form-control" /></td>
+            </tr>
+            <tr>
+                <td><input asp-for="Round_5_B1" class="form-control" /></td>
+                <td class="CenterTextColumn">5</td>
+                <td><input asp-for="Round_5_B2" class="form-control" /></td>
+            </tr>
+            <tr>
+                <td><input asp-for="Round_6_B1" class="form-control" /></td>
+                <td class="CenterTextColumn">6</td>
+                <td><input asp-for="Round_6_B2" class="form-control" /></td>
+            </tr>
+            <tr>
+                <td><input asp-for="Round_7_B1" class="form-control" /></td>
+                <td class="CenterTextColumn">7</td>
+                <td><input asp-for="Round_7_B2" class="form-control" /></td>
+            </tr>
+            <tr>
+                <td><input asp-for="Round_8_B1" class="form-control" /></td>
+                <td class="CenterTextColumn">8</td>
+                <td><input asp-for="Round_8_B2" class="form-control" /></td>
+            </tr>
+            <tr>
+                <td><input asp-for="Round_9_B1" class="form-control" /></td>
+                <td class="CenterTextColumn">9</tdclass="CenterTextColumn">
+                <td><input asp-for="Round_9_B2" class="form-control" /></td>
+            </tr>
+            <tr>
+                <td><input asp-for="Round_10_B1" class="form-control" /></td>
+                <td class="CenterTextColumn">10</td>
+                <td><input asp-for="Round_10_B2" class="form-control" /></td>
+            </tr>
+            <tr>
+                <td><input asp-for="Round_11_B1" class="form-control" /></td>
+                <td class="CenterTextColumn">11</td>
+                <td><input asp-for="Round_11_B2" class="form-control" /></td>
+            </tr>
+            <tr>
+                <td><input asp-for="Round_12_B1" class="form-control" /></td>
+                <td class="CenterTextColumn">12</td>
+                <td><input asp-for="Round_12_B2" class="form-control" /></td>
+            </tr>
+        </table>
+        <div class="form-group">
+            <input type="submit" value="Create" class="btn btn-primary" />
+        </div>
+    </center>
+</form>
+
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

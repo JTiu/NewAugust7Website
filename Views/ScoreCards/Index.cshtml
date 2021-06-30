@@ -1,0 +1,186 @@
+﻿@model IEnumerable<Box_Themis_Capstone.Models.ScoreCard>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Round_1_B1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Round_1_B2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Round_2_B1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Round_2_B2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Round_3_B1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Round_3_B2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Round_4_B1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Round_4_B2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Round_5_B1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Round_5_B2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Round_6_B1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Round_6_B2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Round_7_B1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Round_7_B2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Round_8_B1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Round_8_B2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Round_9_B1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Round_9_B2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Round_10_B1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Round_10_B2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Round_11_B1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Round_11_B2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Round_12_B1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Round_12_B2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Total_B1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Total_B2)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Round_1_B1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Round_1_B2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Round_2_B1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Round_2_B2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Round_3_B1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Round_3_B2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Round_4_B1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Round_4_B2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Round_5_B1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Round_5_B2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Round_6_B1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Round_6_B2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Round_7_B1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Round_7_B2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Round_8_B1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Round_8_B2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Round_9_B1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Round_9_B2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Round_10_B1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Round_10_B2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Round_11_B1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Round_11_B2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Round_12_B1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Round_12_B2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Total_B1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Total_B2)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ScoreCardId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ScoreCardId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ScoreCardId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
