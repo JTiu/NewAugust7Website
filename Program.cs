@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Box_Themis_Capstone
+namespace August7thWebsite
 {
     public class Program
     {

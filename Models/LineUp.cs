@@ -2,9 +2,9 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Box_Themis_Capstone.Models
+namespace August7thWebsite.Models
 {
-    public class ScoreCard   //no direct inheritance from DB context
+    public class LineUp   //no direct inheritance from DB context
     {  //web.config file needs the connection string
         [Key]
         public int ScoreCardId { get; set; }

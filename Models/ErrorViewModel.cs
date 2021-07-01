@@ -1,6 +1,6 @@
 using System;
 
-namespace Box_Themis_Capstone.Models
+namespace August7thWebsite.Models
 {
     public class ErrorViewModel
     {

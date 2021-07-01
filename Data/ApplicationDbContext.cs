@@ -1,4 +1,4 @@
-﻿using Box_Themis_Capstone.Models;
+﻿using August7thWebsite.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Box_Themis_Capstone.Data
+namespace August7thWebsite.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {
@@ -35,7 +35,8 @@ namespace Box_Themis_Capstone.Data
 
         }
        
-        public DbSet<Judge> Judges { get; set; }//#ask is this in the right place?
-        public DbSet<ScoreCard> ScoreCards { get; set; }//changed to private?
+        public DbSet<Participant> Participants { get; set; }
+        public DbSet<LineUp> LineUps { get; set; }
+        public DbSet<TicketBuyer> TicketBuyers { get; set; }
     }
 }

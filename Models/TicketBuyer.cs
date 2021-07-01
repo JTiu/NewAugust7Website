@@ -6,9 +6,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Box_Themis_Capstone.Models
+namespace August7thWebsite.Models
 {
-    public class Judge
+    public class TicketBuyer
     {
         [Key]
         public int Id { get; set; }
@@ -17,6 +17,6 @@ namespace Box_Themis_Capstone.Models
         [ForeignKey("IdentityUser")]
         public string IdentityUserId { get; set; }
         public IdentityUser IdentityUser { get; set; }
-        private List<ScoreCard> ScoreCards { get; set; }
+        private List<LineUp> ScoreCards { get; set; }
     }
 }
