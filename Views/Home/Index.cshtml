@@ -28,7 +28,7 @@
         <br>
         <h1>Featuring Two Featured Main Events!</h1>
         <br>
-        <h2>Mike Manna<i> 'The Pittsburgh Bull" </i><br>v.<br><br> Andrew Satterfield<i> 'Parkersburg's Finest"</i></h2><br>
+        <h2>Mike Manna<i> 'The Pittsburgh Bull" </i><br>v.<br><br> Andrew Satterfield<i> 'Parkersburg's Finest'</i></h2><br>
         <h3>
             Bragging Rights at Stake!<br><br>
 
@@ -36,40 +36,47 @@
     </div>
 </div>
 <br>
+<div class="picture" style=" background-color: #F20519; margin:20px; padding: 20px;  border: 10px dashed black; color: white">
+    <div class="row">
 
-<div class="row">
-    <div class="column">
-        <img src="Images\200px-AndrewSatterfield_profile.jpeg" alt="Satterfield" style="width:100%">
-    </div>
-    <div class="column">
-        <img src="Images\Manna.jpg" alt="Manna" style="width:100%">
+        <div class="column">
+            <img src="Images\200px-AndrewSatterfield_profile.jpeg" alt="Satterfield" style="width:100%">
+        </div>
+        <div class="column">
+            <img src="Images\Manna.jpg" alt="Manna" style="width:100%">
+        </div>
+
     </div>
 
+    <script>
+        function myFunction() {
+            var dots = document.getElementById("dots");
+            var moreText = document.getElementById("more");
+            var btnText = document.getElementById("myBtn");
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Read more";
+                moreText.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btnText.innerHTML = "Read less";
+                moreText.style.display = "inline";
+            }
+        }
+    </script>
 </div>
-<div class="audio-container">
-    <div style="margin:20px; padding:20px; border: 10px dashed black; color: white">
-        <center><h2><br>Listen to a podcast interview with Mike Manna & Cutman Eddie Holiday<br><br></h2></center><br />
-
-        <center>
+    <div class="audio-container">
+        <div style="margin:20px; padding:20px; border: 5px dashed black; background-color: aqua">
             <audio controls>
                 <source src="\AudioFiles\manna&Holiday.m4a">
             </audio>
-        </center>
+            <h3>Listen to a podcast interview with Mike Manna & Cutman Eddie Holiday</h3>
+            <p>Mike Manna-- A Professional Inside & Outside the Ring, plus Cutman Eddie Holiday--Both men in the sport for the right reasons!<span id="dots"></span><span id="more">&nbsp; &nbsp;I spent time in the gym with Mike Manna and pro cutman Eddie Holiday as Mike trains for the headline event with Andrew Satterfield on August 7th in Moundsville, WV.  We covered Mike's reasons for donating his purse to charitable causes, how he maintains two professional careers: Insurance and Professional Boxing. Plus, Cutman Eddie Holiday corners pro boxers for the right reasons.  Don't miss this interview!</span></p>
+            <button onclick="myFunction()" id="myBtn">Read more</button>
+        </div>
     </div>
-</div>
+    <br>
 
-<br>
-<div style="margin:20px; padding:20px; border: 10px dashed black;background-color: gray;color: white">
-    <center>
-        <center><h2><br>We need to avoid unfair and unsafe moments like these.......<br></h2></center>
-        <video width="320" height="240" controls>
-            <source src="\AudioFiles\zkzwzqye2k3v_I9HKZxGa_Zpy8 - Copy.mp4">
-        </video>
-        <video width="320" height="240" controls>
-            <source src="\AudioFiles\StevenA_Smith.mp4">
-        </video>
-    </center>
-</div>
-</div>
 
-<!--protect from comments-->
+    <!--protect from comments-->
