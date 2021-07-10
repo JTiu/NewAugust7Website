@@ -12,12 +12,62 @@
         width: 50%;
         padding: 15px;
     }
+    .column1{
+        float: left;
+        width: 33.33%;
+        padding: 15px;
+    }
 
     /* Clearfix (clear floats) */
     .row::after {
         content: "";
         clear: both;
         display: table;
+    }
+</style>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .flip-card {
+        background-color: transparent;
+        width: 300px;
+        height: 300px;
+        perspective: 1000px;
+    }
+
+    .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    }
+
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    .flip-card-front {
+        background-color: cornflowerblue;
+        color: black;
+    }
+
+    .flip-card-back {
+        background-color: #2980b9;
+        color: white;
+        transform: rotateY(180deg);
     }
 </style>
 <div class="picture" style=" background-color: #F20519; margin:20px; padding: 20px;  border: 10px dashed black; color: white">
@@ -66,17 +116,66 @@
         }
     </script>
 </div>
-    <div class="audio-container">
-        <div style="margin:20px; padding:20px; border: 5px dashed black; background-color: aqua">
-            <audio controls>
-                <source src="\AudioFiles\manna&Holiday.m4a">
-            </audio>
-            <h3>Listen to a podcast interview with Mike Manna & Cutman Eddie Holiday</h3>
-            <p>Mike Manna-- A Professional Inside & Outside the Ring, plus Cutman Eddie Holiday--Both men in the sport for the right reasons!<span id="dots"></span><span id="more">&nbsp; &nbsp;I spent time in the gym with Mike Manna and pro cutman Eddie Holiday as Mike trains for the headline event with Andrew Satterfield on August 7th in Moundsville, WV.  We covered Mike's reasons for donating his purse to charitable causes, how he maintains two professional careers: Insurance and Professional Boxing. Plus, Cutman Eddie Holiday corners pro boxers for the right reasons.  Don't miss this interview!</span></p>
-            <button onclick="myFunction()" id="myBtn">Read more</button>
+<div class="audio-container">
+    <div style="margin:20px; padding:20px; border: 5px dashed black; background-color: aqua">
+        <audio controls>
+            <source src="\AudioFiles\manna&Holiday.m4a">
+        </audio>
+        <h3>Listen to a podcast interview with Mike Manna & Cutman Eddie Holiday</h3>
+        <p>Mike Manna-- A Professional Inside & Outside the Ring, plus Cutman Eddie Holiday--Both men in the sport for the right reasons!<span id="dots"></span><span id="more">&nbsp; &nbsp;I spent time in the gym with Mike Manna and pro cutman Eddie Holiday as Mike trains for the headline event with Andrew Satterfield on August 7th in Moundsville, WV.  We covered Mike's reasons for donating his purse to charitable causes, how he maintains two professional careers: Insurance and Professional Boxing. Plus, Cutman Eddie Holiday corners pro boxers for the right reasons.  Don't miss this interview!</span></p>
+        <button onclick="myFunction()" id="myBtn">Read more</button>
+    </div>
+</div>
+<br>
+<h1>The Ring Girls!</h1>
+<h3>Hover over the image below:</h3>
+<div class="row">
+    <div class="column1">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h1><br /> <br>Sindel</h1>
+
+                </div>
+                <div class="flip-card-back">
+                    <img src="Images\Sindel.jpg" alt="pix" style="width:100%">
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="column1">
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h1><br /> <br>Lori</h1>
+
+                </div>
+                <div class="flip-card-back">
+                    <img src="Images\IMG_0751.jpg" alt="pix" style="width:100%">
+                </div>
+            </div>
         </div>
     </div>
-    <br>
+    <div class="column1">
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h1><br /> <br>Cheryl</h1>
+
+                </div>
+                <div class="flip-card-back">
+                    <img src="Images\Sorice.jpg" alt="pix" style="width:100%">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
 
 
     <!--protect from comments-->
