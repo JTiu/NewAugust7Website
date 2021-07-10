@@ -12,7 +12,11 @@ namespace August7thWebsite.Models
     {
         [Key]
         public int Id { get; set; }
-        public String Full_Name { get; set; }
+        public String First_Name { get; set; }
+        public String Last_Name { get; set; }
+        public String Email{ get; set; }
+        public String CellPhone { get; set; }
+       
 
         [ForeignKey("IdentityUser")]
         public string IdentityUserId { get; set; }

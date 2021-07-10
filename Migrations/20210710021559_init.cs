@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace August7thWebsiteVS.Migrations
 {
-    public partial class ChangedModel : Migration
+    public partial class init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -50,40 +50,27 @@ namespace August7thWebsiteVS.Migrations
                 name: "LineUps",
                 columns: table => new
                 {
-                    ScoreCardId = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    FightId = table.Column<int>(type: "int", nullable: false),
-                    UserId = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Round_1_B1 = table.Column<int>(type: "int", nullable: false),
-                    Round_1_B2 = table.Column<int>(type: "int", nullable: false),
-                    Round_2_B1 = table.Column<int>(type: "int", nullable: false),
-                    Round_2_B2 = table.Column<int>(type: "int", nullable: false),
-                    Round_3_B1 = table.Column<int>(type: "int", nullable: false),
-                    Round_3_B2 = table.Column<int>(type: "int", nullable: false),
-                    Round_4_B1 = table.Column<int>(type: "int", nullable: false),
-                    Round_4_B2 = table.Column<int>(type: "int", nullable: false),
-                    Round_5_B1 = table.Column<int>(type: "int", nullable: false),
-                    Round_5_B2 = table.Column<int>(type: "int", nullable: false),
-                    Round_6_B1 = table.Column<int>(type: "int", nullable: false),
-                    Round_6_B2 = table.Column<int>(type: "int", nullable: false),
-                    Round_7_B1 = table.Column<int>(type: "int", nullable: false),
-                    Round_7_B2 = table.Column<int>(type: "int", nullable: false),
-                    Round_8_B1 = table.Column<int>(type: "int", nullable: false),
-                    Round_8_B2 = table.Column<int>(type: "int", nullable: false),
-                    Round_9_B1 = table.Column<int>(type: "int", nullable: false),
-                    Round_9_B2 = table.Column<int>(type: "int", nullable: false),
-                    Round_10_B1 = table.Column<int>(type: "int", nullable: false),
-                    Round_10_B2 = table.Column<int>(type: "int", nullable: false),
-                    Round_11_B1 = table.Column<int>(type: "int", nullable: false),
-                    Round_11_B2 = table.Column<int>(type: "int", nullable: false),
-                    Round_12_B1 = table.Column<int>(type: "int", nullable: false),
-                    Round_12_B2 = table.Column<int>(type: "int", nullable: false),
-                    Total_B1 = table.Column<int>(type: "int", nullable: false),
-                    Total_B2 = table.Column<int>(type: "int", nullable: false)
+                    Date = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Match_1_B1 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Match_1_B2 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Match_2_B1 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Match_2_B2 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Match_3_B1 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Match_3_B2 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Match_4_B1 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Match_4_B2 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Match_5_B1 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Match_5_B2 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Match_6_B1 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Match_6_B2 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Match_7_B1 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Match_7_B2 = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_LineUps", x => x.ScoreCardId);
+                    table.PrimaryKey("PK_LineUps", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -198,7 +185,14 @@ namespace August7thWebsiteVS.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Full_Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    First_Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Last_Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Ring_Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Weight = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Wins = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Losses = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Draw = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    KnockOuts = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     IdentityUserId = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>
@@ -218,7 +212,10 @@ namespace August7thWebsiteVS.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Full_Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    First_Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Last_Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CellPhone = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     IdentityUserId = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>
@@ -235,7 +232,7 @@ namespace August7thWebsiteVS.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { "9ae2458e-e3d2-4604-b413-8c920cd35120", "ba5b6f75-34c4-4237-aa8f-2d7c192084e3", "Judge", "JUDGE" });
+                values: new object[] { "085c226b-8fff-472c-85ff-22dab93eda4f", "643adea2-7572-473d-b4e9-bb7d2583a463", "Judge", "JUDGE" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",

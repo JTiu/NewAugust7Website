@@ -1,0 +1,119 @@
+﻿@model IEnumerable<August7thWebsite.Models.LineUp>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Match_1_B1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Match_1_B2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Match_2_B1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Match_2_B2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Match_3_B1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Match_3_B2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Match_4_B1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Match_4_B2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Match_5_B1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Match_5_B2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Match_6_B1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Match_6_B2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Match_7_B1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Match_7_B2)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Match_1_B1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Match_1_B2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Match_2_B1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Match_2_B2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Match_3_B1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Match_3_B2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Match_4_B1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Match_4_B2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Match_5_B1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Match_5_B2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Match_6_B1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Match_6_B2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Match_7_B1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Match_7_B2)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

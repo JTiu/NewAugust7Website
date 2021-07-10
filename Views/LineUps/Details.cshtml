@@ -1,0 +1,108 @@
+﻿@model August7thWebsite.Models.LineUp
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>LineUp</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Match_1_B1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Match_1_B1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Match_1_B2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Match_1_B2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Match_2_B1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Match_2_B1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Match_2_B2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Match_2_B2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Match_3_B1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Match_3_B1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Match_3_B2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Match_3_B2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Match_4_B1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Match_4_B1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Match_4_B2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Match_4_B2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Match_5_B1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Match_5_B1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Match_5_B2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Match_5_B2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Match_6_B1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Match_6_B1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Match_6_B2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Match_6_B2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Match_7_B1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Match_7_B1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Match_7_B2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Match_7_B2)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

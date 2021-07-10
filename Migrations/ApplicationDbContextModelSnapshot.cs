@@ -21,96 +21,57 @@ namespace August7thWebsiteVS.Migrations
 
             modelBuilder.Entity("August7thWebsite.Models.LineUp", b =>
                 {
-                    b.Property<int>("ScoreCardId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("FightId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Round_10_B1")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Round_10_B2")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Round_11_B1")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Round_11_B2")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Round_12_B1")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Round_12_B2")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Round_1_B1")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Round_1_B2")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Round_2_B1")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Round_2_B2")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Round_3_B1")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Round_3_B2")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Round_4_B1")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Round_4_B2")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Round_5_B1")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Round_5_B2")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Round_6_B1")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Round_6_B2")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Round_7_B1")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Round_7_B2")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Round_8_B1")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Round_8_B2")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Round_9_B1")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Round_9_B2")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Total_B1")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Total_B2")
-                        .HasColumnType("int");
-
-                    b.Property<string>("UserId")
+                    b.Property<string>("Date")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ScoreCardId");
+                    b.Property<string>("Match_1_B1")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Match_1_B2")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Match_2_B1")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Match_2_B2")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Match_3_B1")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Match_3_B2")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Match_4_B1")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Match_4_B2")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Match_5_B1")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Match_5_B2")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Match_6_B1")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Match_6_B2")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Match_7_B1")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Match_7_B2")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
 
                     b.ToTable("LineUps");
                 });
@@ -163,11 +124,20 @@ namespace August7thWebsiteVS.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Full_Name")
+                    b.Property<string>("CellPhone")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("First_Name")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("IdentityUserId")
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Last_Name")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -205,8 +175,8 @@ namespace August7thWebsiteVS.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "a8bb6226-c13d-4708-bd7f-c287b203b95d",
-                            ConcurrencyStamp = "29ea43ba-bd4b-4188-a0da-5686a8b51974",
+                            Id = "085c226b-8fff-472c-85ff-22dab93eda4f",
+                            ConcurrencyStamp = "643adea2-7572-473d-b4e9-bb7d2583a463",
                             Name = "Judge",
                             NormalizedName = "JUDGE"
                         });
