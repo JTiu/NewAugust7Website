@@ -232,7 +232,7 @@ namespace August7thWebsiteVS.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { "085c226b-8fff-472c-85ff-22dab93eda4f", "643adea2-7572-473d-b4e9-bb7d2583a463", "Judge", "JUDGE" });
+                values: new object[] { "0912c413-8b10-40f3-bac2-f8b02bad75c3", "75742ba1-99a0-4cc4-ba2f-4e3bb788848e", "Judge", "JUDGE" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",

@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace August7thWebsiteVS.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210710021559_init")]
+    [Migration("20210713174625_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -177,8 +177,8 @@ namespace August7thWebsiteVS.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "085c226b-8fff-472c-85ff-22dab93eda4f",
-                            ConcurrencyStamp = "643adea2-7572-473d-b4e9-bb7d2583a463",
+                            Id = "0912c413-8b10-40f3-bac2-f8b02bad75c3",
+                            ConcurrencyStamp = "75742ba1-99a0-4cc4-ba2f-4e3bb788848e",
                             Name = "Judge",
                             NormalizedName = "JUDGE"
                         });
