@@ -7,22 +7,26 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using August7thWebsite.Data;
 using August7thWebsite.Models;
+using AutoMapper;
+using August7thWebsiteVS.Models;
+using System.IO;
 
 namespace August7thWebsiteVS.Controllers
 {
     public class ParticipantsController : Controller
     {
         private readonly ApplicationDbContext _context;
-
-        public ParticipantsController(ApplicationDbContext context)
+        private readonly IMapper _mapper;
+        public ParticipantsController(ApplicationDbContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
         // GET: Participants
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.Participants.Include(p => p.IdentityUser);
+            var applicationDbContext = _context.Participants;
             return View(await applicationDbContext.ToListAsync());
         }
 
@@ -35,13 +39,14 @@ namespace August7thWebsiteVS.Controllers
             }
 
             var participant = await _context.Participants
-                .Include(p => p.IdentityUser)
+                
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (participant == null)
             {
                 return NotFound();
             }
-
+            var base64 = Convert.ToBase64String(participant.ParticipantPhoto);
+            ViewData["ParticipantUploadPhoto"] = $"data:image;base64,{base64}";
             return View(participant);
         }
 
@@ -57,16 +62,19 @@ namespace August7thWebsiteVS.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,First_Name,Last_Name,Ring_Name,Weight,Wins,Losses,Draw,KnockOuts,IdentityUserId")] Participant participant)
+        public async Task<IActionResult> Create([Bind("Id,First_Name,Last_Name,Ring_Name,Weight,Wins,Losses,Draw,KnockOuts,PictureParticipant")] ParticipantViewModel participantViewModel)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(participant);
+                MemoryStream memoryStream = new MemoryStream();
+                participantViewModel.PictureParticipant.CopyTo(memoryStream);
+                participantViewModel.ParticipantPhoto = memoryStream.ToArray();
+                _context.Add(participantViewModel);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdentityUserId"] = new SelectList(_context.Users, "Id", "Id", participant.IdentityUserId);
-            return View(participant);
+          //  ViewData["IdentityUserId"] = new SelectList(_context.Users, "Id", "Id", participant.Id);
+            return View(participantViewModel);
         }
 
         // GET: Participants/Edit/5
@@ -82,8 +90,9 @@ namespace August7thWebsiteVS.Controllers
             {
                 return NotFound();
             }
-            ViewData["IdentityUserId"] = new SelectList(_context.Users, "Id", "Id", participant.IdentityUserId);
-            return View(participant);
+            //ViewData["IdentityUserId"] = new SelectList(_context.Users, "Id", "Id", participant.IdentityUserId);
+            ParticipantViewModel participantViewModel = _mapper.Map<ParticipantViewModel>(participant);
+            return View(participantViewModel);
         }
 
         // POST: Participants/Edit/5
@@ -91,9 +100,9 @@ namespace August7thWebsiteVS.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,First_Name,Last_Name,Ring_Name,Weight,Wins,Losses,Draw,KnockOuts,IdentityUserId")] Participant participant)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,First_Name,Last_Name,Ring_Name,Weight,Wins,Losses,Draw,KnockOuts,PictureParticipant")] ParticipantViewModel participantViewModel)
         {
-            if (id != participant.Id)
+            if (id != participantViewModel.Id)
             {
                 return NotFound();
             }
@@ -102,12 +111,15 @@ namespace August7thWebsiteVS.Controllers
             {
                 try
                 {
-                    _context.Update(participant);
+                    MemoryStream memoryStream = new MemoryStream();
+                    participantViewModel.PictureParticipant.CopyTo(memoryStream);
+                    participantViewModel.ParticipantPhoto = memoryStream.ToArray();
+                    _context.Update(participantViewModel);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ParticipantExists(participant.Id))
+                    if (!ParticipantExists(participantViewModel.Id))
                     {
                         return NotFound();
                     }
@@ -118,8 +130,8 @@ namespace August7thWebsiteVS.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdentityUserId"] = new SelectList(_context.Users, "Id", "Id", participant.IdentityUserId);
-            return View(participant);
+            //ViewData["IdentityUserId"] = new SelectList(_context.Users, "Id", "Id", participant.IdentityUserId);
+            return View(participantViewModel);
         }
 
         // GET: Participants/Delete/5
@@ -131,7 +143,7 @@ namespace August7thWebsiteVS.Controllers
             }
 
             var participant = await _context.Participants
-                .Include(p => p.IdentityUser)
+                
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (participant == null)
             {

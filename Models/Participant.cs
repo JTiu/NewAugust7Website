@@ -20,10 +20,8 @@ namespace August7thWebsite.Models
         public String Losses { get; set; }
         public String Draw { get; set; }
         public String KnockOuts { get; set; }
+        public Byte[] ParticipantPhoto { get; set; }
 
-        [ForeignKey("IdentityUser")]
-        public string IdentityUserId { get; set; }
-        public IdentityUser IdentityUser { get; set; }
-        private List<LineUp> ScoreCards { get; set; }
+
     }
 }

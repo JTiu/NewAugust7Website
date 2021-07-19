@@ -89,9 +89,6 @@ namespace August7thWebsiteVS.Migrations
                     b.Property<string>("First_Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("IdentityUserId")
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<string>("KnockOuts")
                         .HasColumnType("nvarchar(max)");
 
@@ -100,6 +97,9 @@ namespace August7thWebsiteVS.Migrations
 
                     b.Property<string>("Losses")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<byte[]>("ParticipantPhoto")
+                        .HasColumnType("varbinary(max)");
 
                     b.Property<string>("Ring_Name")
                         .HasColumnType("nvarchar(max)");
@@ -111,8 +111,6 @@ namespace August7thWebsiteVS.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("IdentityUserId");
 
                     b.ToTable("Participants");
                 });
@@ -175,8 +173,8 @@ namespace August7thWebsiteVS.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "0912c413-8b10-40f3-bac2-f8b02bad75c3",
-                            ConcurrencyStamp = "75742ba1-99a0-4cc4-ba2f-4e3bb788848e",
+                            Id = "fdb782ea-26ea-4f17-aded-0cc0f7f9df3a",
+                            ConcurrencyStamp = "96ae2893-88ff-4fe8-94a9-40e8959726fd",
                             Name = "Judge",
                             NormalizedName = "JUDGE"
                         });
@@ -349,15 +347,6 @@ namespace August7thWebsiteVS.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
-                });
-
-            modelBuilder.Entity("August7thWebsite.Models.Participant", b =>
-                {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "IdentityUser")
-                        .WithMany()
-                        .HasForeignKey("IdentityUserId");
-
-                    b.Navigation("IdentityUser");
                 });
 
             modelBuilder.Entity("August7thWebsite.Models.TicketBuyer", b =>
