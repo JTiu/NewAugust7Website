@@ -4,14 +4,16 @@ using August7thWebsite.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace August7thWebsiteVS.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210721202809_AddedScoreCadTleToDB")]
+    partial class AddedScoreCadTleToDB
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -122,59 +124,8 @@ namespace August7thWebsiteVS.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Boxer1")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Boxer2")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("DateCreated")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("DeterminateFactor_R1")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("DeterminateFactor_R10")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("DeterminateFactor_R11")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("DeterminateFactor_R12")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("DeterminateFactor_R2")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("DeterminateFactor_R3")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("DeterminateFactor_R4")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("DeterminateFactor_R5")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("DeterminateFactor_R6")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("DeterminateFactor_R7")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("DeterminateFactor_R8")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("DeterminateFactor_R9")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("FightId")
                         .HasColumnType("int");
-
-                    b.Property<string>("FirstNameOnCard")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LastNameOnCard")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Round_10_B1")
                         .HasColumnType("int");
@@ -320,8 +271,8 @@ namespace August7thWebsiteVS.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "ad012fda-bbd2-4266-ba78-41b7505bf10d",
-                            ConcurrencyStamp = "95a3631d-2f0a-4b58-bcc4-fca3faa1225b",
+                            Id = "ce80c97a-2176-4446-95e8-3106db799f2c",
+                            ConcurrencyStamp = "525a0905-78ed-43aa-a305-eda3b9808712",
                             Name = "Judge",
                             NormalizedName = "JUDGE"
                         });

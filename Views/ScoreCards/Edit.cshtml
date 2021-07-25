@@ -1,0 +1,251 @@
+﻿@model August7thWebsite.Models.ScoreCard
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>ScoreCard</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ScoreCardId" />
+            <div class="form-group">
+                <label asp-for="FightId" class="control-label"></label>
+                <input asp-for="FightId" class="form-control" />
+                <span asp-validation-for="FightId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserId" class="control-label"></label>
+                <input asp-for="UserId" class="form-control" />
+                <span asp-validation-for="UserId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Round_1_B1" class="control-label"></label>
+                <input asp-for="Round_1_B1" class="form-control" />
+                <span asp-validation-for="Round_1_B1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Round_1_B2" class="control-label"></label>
+                <input asp-for="Round_1_B2" class="form-control" />
+                <span asp-validation-for="Round_1_B2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Round_2_B1" class="control-label"></label>
+                <input asp-for="Round_2_B1" class="form-control" />
+                <span asp-validation-for="Round_2_B1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Round_2_B2" class="control-label"></label>
+                <input asp-for="Round_2_B2" class="form-control" />
+                <span asp-validation-for="Round_2_B2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Round_3_B1" class="control-label"></label>
+                <input asp-for="Round_3_B1" class="form-control" />
+                <span asp-validation-for="Round_3_B1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Round_3_B2" class="control-label"></label>
+                <input asp-for="Round_3_B2" class="form-control" />
+                <span asp-validation-for="Round_3_B2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Round_4_B1" class="control-label"></label>
+                <input asp-for="Round_4_B1" class="form-control" />
+                <span asp-validation-for="Round_4_B1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Round_4_B2" class="control-label"></label>
+                <input asp-for="Round_4_B2" class="form-control" />
+                <span asp-validation-for="Round_4_B2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Round_5_B1" class="control-label"></label>
+                <input asp-for="Round_5_B1" class="form-control" />
+                <span asp-validation-for="Round_5_B1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Round_5_B2" class="control-label"></label>
+                <input asp-for="Round_5_B2" class="form-control" />
+                <span asp-validation-for="Round_5_B2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Round_6_B1" class="control-label"></label>
+                <input asp-for="Round_6_B1" class="form-control" />
+                <span asp-validation-for="Round_6_B1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Round_6_B2" class="control-label"></label>
+                <input asp-for="Round_6_B2" class="form-control" />
+                <span asp-validation-for="Round_6_B2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Round_7_B1" class="control-label"></label>
+                <input asp-for="Round_7_B1" class="form-control" />
+                <span asp-validation-for="Round_7_B1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Round_7_B2" class="control-label"></label>
+                <input asp-for="Round_7_B2" class="form-control" />
+                <span asp-validation-for="Round_7_B2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Round_8_B1" class="control-label"></label>
+                <input asp-for="Round_8_B1" class="form-control" />
+                <span asp-validation-for="Round_8_B1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Round_8_B2" class="control-label"></label>
+                <input asp-for="Round_8_B2" class="form-control" />
+                <span asp-validation-for="Round_8_B2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Round_9_B1" class="control-label"></label>
+                <input asp-for="Round_9_B1" class="form-control" />
+                <span asp-validation-for="Round_9_B1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Round_9_B2" class="control-label"></label>
+                <input asp-for="Round_9_B2" class="form-control" />
+                <span asp-validation-for="Round_9_B2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Round_10_B1" class="control-label"></label>
+                <input asp-for="Round_10_B1" class="form-control" />
+                <span asp-validation-for="Round_10_B1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Round_10_B2" class="control-label"></label>
+                <input asp-for="Round_10_B2" class="form-control" />
+                <span asp-validation-for="Round_10_B2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Round_11_B1" class="control-label"></label>
+                <input asp-for="Round_11_B1" class="form-control" />
+                <span asp-validation-for="Round_11_B1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Round_11_B2" class="control-label"></label>
+                <input asp-for="Round_11_B2" class="form-control" />
+                <span asp-validation-for="Round_11_B2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Round_12_B1" class="control-label"></label>
+                <input asp-for="Round_12_B1" class="form-control" />
+                <span asp-validation-for="Round_12_B1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Round_12_B2" class="control-label"></label>
+                <input asp-for="Round_12_B2" class="form-control" />
+                <span asp-validation-for="Round_12_B2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Total_B1" class="control-label"></label>
+                <input asp-for="Total_B1" class="form-control" />
+                <span asp-validation-for="Total_B1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Total_B2" class="control-label"></label>
+                <input asp-for="Total_B2" class="form-control" />
+                <span asp-validation-for="Total_B2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeterminateFactor_R1" class="control-label"></label>
+                <input asp-for="DeterminateFactor_R1" class="form-control" />
+                <span asp-validation-for="DeterminateFactor_R1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeterminateFactor_R2" class="control-label"></label>
+                <input asp-for="DeterminateFactor_R2" class="form-control" />
+                <span asp-validation-for="DeterminateFactor_R2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeterminateFactor_R3" class="control-label"></label>
+                <input asp-for="DeterminateFactor_R3" class="form-control" />
+                <span asp-validation-for="DeterminateFactor_R3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeterminateFactor_R4" class="control-label"></label>
+                <input asp-for="DeterminateFactor_R4" class="form-control" />
+                <span asp-validation-for="DeterminateFactor_R4" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeterminateFactor_R5" class="control-label"></label>
+                <input asp-for="DeterminateFactor_R5" class="form-control" />
+                <span asp-validation-for="DeterminateFactor_R5" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeterminateFactor_R6" class="control-label"></label>
+                <input asp-for="DeterminateFactor_R6" class="form-control" />
+                <span asp-validation-for="DeterminateFactor_R6" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeterminateFactor_R7" class="control-label"></label>
+                <input asp-for="DeterminateFactor_R7" class="form-control" />
+                <span asp-validation-for="DeterminateFactor_R7" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeterminateFactor_R8" class="control-label"></label>
+                <input asp-for="DeterminateFactor_R8" class="form-control" />
+                <span asp-validation-for="DeterminateFactor_R8" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeterminateFactor_R9" class="control-label"></label>
+                <input asp-for="DeterminateFactor_R9" class="form-control" />
+                <span asp-validation-for="DeterminateFactor_R9" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeterminateFactor_R10" class="control-label"></label>
+                <input asp-for="DeterminateFactor_R10" class="form-control" />
+                <span asp-validation-for="DeterminateFactor_R10" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeterminateFactor_R11" class="control-label"></label>
+                <input asp-for="DeterminateFactor_R11" class="form-control" />
+                <span asp-validation-for="DeterminateFactor_R11" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeterminateFactor_R12" class="control-label"></label>
+                <input asp-for="DeterminateFactor_R12" class="form-control" />
+                <span asp-validation-for="DeterminateFactor_R12" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FirstNameOnCard" class="control-label"></label>
+                <input asp-for="FirstNameOnCard" class="form-control" />
+                <span asp-validation-for="FirstNameOnCard" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastNameOnCard" class="control-label"></label>
+                <input asp-for="LastNameOnCard" class="form-control" />
+                <span asp-validation-for="LastNameOnCard" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateCreated" class="control-label"></label>
+                <input asp-for="DateCreated" class="form-control" />
+                <span asp-validation-for="DateCreated" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Boxer1" class="control-label"></label>
+                <input asp-for="Boxer1" class="form-control" />
+                <span asp-validation-for="Boxer1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Boxer2" class="control-label"></label>
+                <input asp-for="Boxer2" class="form-control" />
+                <span asp-validation-for="Boxer2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

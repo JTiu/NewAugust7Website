@@ -38,5 +38,6 @@ namespace August7thWebsite.Data
         public DbSet<Participant> Participants { get; set; }
         public DbSet<LineUp> LineUps { get; set; }
         public DbSet<TicketBuyer> TicketBuyers { get; set; }
+        public DbSet<ScoreCard> ScoreCards { get; set; }
     }
 }

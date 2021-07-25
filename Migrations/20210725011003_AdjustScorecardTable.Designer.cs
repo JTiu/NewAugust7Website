@@ -4,14 +4,16 @@ using August7thWebsite.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace August7thWebsiteVS.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210725011003_AdjustScorecardTable")]
+    partial class AdjustScorecardTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -128,8 +130,8 @@ namespace August7thWebsiteVS.Migrations
                     b.Property<string>("Boxer2")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("DateCreated")
-                        .HasColumnType("datetime2");
+                    b.Property<string>("DateCreated")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("DeterminateFactor_R1")
                         .HasColumnType("nvarchar(max)");
@@ -320,8 +322,8 @@ namespace August7thWebsiteVS.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "ad012fda-bbd2-4266-ba78-41b7505bf10d",
-                            ConcurrencyStamp = "95a3631d-2f0a-4b58-bcc4-fca3faa1225b",
+                            Id = "bf244cb0-528b-4626-a3c8-e30dfd007173",
+                            ConcurrencyStamp = "851efe3e-d167-4f54-8946-45874cceec43",
                             Name = "Judge",
                             NormalizedName = "JUDGE"
                         });

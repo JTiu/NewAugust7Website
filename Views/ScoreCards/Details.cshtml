@@ -1,0 +1,288 @@
+﻿@model August7thWebsite.Models.ScoreCard
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>ScoreCard</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FightId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FightId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.UserId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UserId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Round_1_B1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Round_1_B1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Round_1_B2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Round_1_B2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Round_2_B1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Round_2_B1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Round_2_B2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Round_2_B2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Round_3_B1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Round_3_B1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Round_3_B2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Round_3_B2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Round_4_B1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Round_4_B1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Round_4_B2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Round_4_B2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Round_5_B1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Round_5_B1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Round_5_B2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Round_5_B2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Round_6_B1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Round_6_B1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Round_6_B2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Round_6_B2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Round_7_B1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Round_7_B1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Round_7_B2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Round_7_B2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Round_8_B1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Round_8_B1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Round_8_B2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Round_8_B2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Round_9_B1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Round_9_B1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Round_9_B2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Round_9_B2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Round_10_B1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Round_10_B1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Round_10_B2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Round_10_B2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Round_11_B1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Round_11_B1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Round_11_B2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Round_11_B2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Round_12_B1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Round_12_B1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Round_12_B2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Round_12_B2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Total_B1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Total_B1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Total_B2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Total_B2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DeterminateFactor_R1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DeterminateFactor_R1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DeterminateFactor_R2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DeterminateFactor_R2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DeterminateFactor_R3)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DeterminateFactor_R3)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DeterminateFactor_R4)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DeterminateFactor_R4)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DeterminateFactor_R5)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DeterminateFactor_R5)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DeterminateFactor_R6)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DeterminateFactor_R6)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DeterminateFactor_R7)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DeterminateFactor_R7)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DeterminateFactor_R8)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DeterminateFactor_R8)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DeterminateFactor_R9)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DeterminateFactor_R9)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DeterminateFactor_R10)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DeterminateFactor_R10)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DeterminateFactor_R11)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DeterminateFactor_R11)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DeterminateFactor_R12)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DeterminateFactor_R12)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FirstNameOnCard)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FirstNameOnCard)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LastNameOnCard)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LastNameOnCard)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DateCreated)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DateCreated)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Boxer1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Boxer1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Boxer2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Boxer2)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ScoreCardId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
