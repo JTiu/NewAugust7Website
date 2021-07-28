@@ -19,42 +19,115 @@
 <div class="picture" style=" background-color: #F20519; margin:20px; padding: 20px;  border: 10px dashed black; color: white; text-align:center">
 
 
-    <!--<h1>value: @Html.DisplayFor(model => model.Round_1_B1)</h1>-->
+    
     <center>
         <div>
-            @Html.DisplayFor(model => model.FirstNameOnCard)
-            @Html.DisplayFor(model => model.LastNameOnCard)
+            <h2>
+                @Html.DisplayFor(model => model.FirstNameOnCard)
+                @Html.DisplayFor(model => model.LastNameOnCard)'s card'
+            </h2>
             <br />
-            @Model.DateCreated.ToShortDateString()
+            Created: &nbsp;@Model.DateCreated.ToShortDateString()
         </div>
 
 
         <table>
 
             <tr>
-                <th class="CenterTextColumn">Boxer 1</th>
-                <th></th>
-                <th class="CenterTextColumn">Boxer 2</th>
+                <th class="CenterTextColumn">Round</th>
+                <th class="CenterTextColumn">@Html.DisplayFor(model => model.Boxer1)</th>
+                <th class="CenterTextColumn">@Html.DisplayFor(model => model.Boxer2)</th>
+                <th class="CenterTextColumn">Determining Factor</th>
             </tr>
             <tr>
-                <td><input class="form-control" value="@Html.DisplayFor(model => model.Round_1_B1)" /></td>
                 <td class="CenterTextColumn">1</td>
+                <td><input class="form-control" value="@Html.DisplayFor(model => model.Round_1_B1)" /></td>
                 <td><input class="form-control" value="@Html.DisplayFor(model => model.Round_1_B2)" /></td>
+                <td><input class="form-control" value="@Html.DisplayFor(model => model.DeterminateFactor_R1)" /></td>
             </tr>
             <tr>
-                <td><input class="form-control" value="@Html.DisplayFor(model => model.Round_2_B1)" /></td>
                 <td class="CenterTextColumn">2</td>
-                <td><input class="form-control" value="@Html.DisplayFor(model => model.Round_2_B2)" /></td>
-            </tr>
-            <tr>
-                <td><input class="form-control" value="@Html.DisplayFor(model => model.Round_3_B1)" /></td>
-                <td class="CenterTextColumn">3</td>
-                <td><input class="form-control" value="@Html.DisplayFor(model => model.Round_3_B2)" /></td>
-            </tr>
+                <td><input class="form-control" value="@Html.DisplayFor(model => model.Round_2_B1)" /></td>
 
+                <td><input class="form-control" value="@Html.DisplayFor(model => model.Round_2_B2)" /></td>
+                <td><input class="form-control" value="@Html.DisplayFor(model => model.DeterminateFactor_R2)" /></td>
+            </tr>
             <tr>
-                <td><input class="form-control" value="@Html.DisplayFor(model => model.Total_B1)" /></td>
+                <td class="CenterTextColumn">3</td>
+                <td><input class="form-control" value="@Html.DisplayFor(model => model.Round_3_B1)" /></td>
+
+                <td><input class="form-control" value="@Html.DisplayFor(model => model.Round_3_B2)" /></td>
+                <td><input class="form-control" value="@Html.DisplayFor(model => model.DeterminateFactor_R3)" /></td>
+
+            </tr>
+            <tr>
+                <td class="CenterTextColumn">4</td>
+                <td><input class="form-control" value="@Html.DisplayFor(model => model.Round_4_B1)" /></td>
+
+                <td><input class="form-control" value="@Html.DisplayFor(model => model.Round_4_B2)" /></td>
+                <td><input class="form-control" value="@Html.DisplayFor(model => model.DeterminateFactor_R4)" /></td>
+            </tr>
+            <tr>
+                <td class="CenterTextColumn">5</td>
+                <td><input class="form-control" value="@Html.DisplayFor(model => model.Round_5_B2)" /></td>
+
+                <td><input class="form-control" value="@Html.DisplayFor(model => model.Round_5_B2)" /></td>
+                <td><input class="form-control" value="@Html.DisplayFor(model => model.DeterminateFactor_R5)" /></td>
+            </tr>
+            <tr>
+                <td class="CenterTextColumn">6</td>
+                <td><input class="form-control" value="@Html.DisplayFor(model => model.Round_6_B2)" /></td>
+
+                <td><input class="form-control" value="@Html.DisplayFor(model => model.Round_6_B2)" /></td>
+                <td><input class="form-control" value="@Html.DisplayFor(model => model.DeterminateFactor_R6)" /></td>
+            </tr>
+            <tr>
+                <td class="CenterTextColumn">7</td>
+                <td><input class="form-control" value="@Html.DisplayFor(model => model.Round_7_B2)" /></td>
+
+                <td><input class="form-control" value="@Html.DisplayFor(model => model.Round_7_B2)" /></td>
+                <td><input class="form-control" value="@Html.DisplayFor(model => model.DeterminateFactor_R7)" /></td>
+            </tr>
+            <tr>
+                <td class="CenterTextColumn">8</td>
+                <td><input class="form-control" value="@Html.DisplayFor(model => model.Round_8_B2)" /></td>
+                <td><input class="form-control" value="@Html.DisplayFor(model => model.Round_8_B2)" /></td>
+                <td><input class="form-control" value="@Html.DisplayFor(model => model.DeterminateFactor_R8)" /></td>
+            </tr>
+            <tr>
+                <td class="CenterTextColumn">9</td>
+                <td><input class="form-control" value="@Html.DisplayFor(model => model.Round_9_B2)" /></td>
+                <td><input class="form-control" value="@Html.DisplayFor(model => model.Round_9_B2)" /></td>
+                <td><input class="form-control" value="@Html.DisplayFor(model => model.DeterminateFactor_R9)" /></td>
+            </tr>
+            <tr>
+                <td class="CenterTextColumn">9</td>
+                <td><input class="form-control" value="@Html.DisplayFor(model => model.Round_9_B2)" /></td>
+                <td><input class="form-control" value="@Html.DisplayFor(model => model.Round_9_B2)" /></td>
+                <td><input class="form-control" value="@Html.DisplayFor(model => model.DeterminateFactor_R9)" /></td>
+            </tr>
+            <tr>
+                <td class="CenterTextColumn">10</td>
+                <td><input class="form-control" value="@Html.DisplayFor(model => model.Round_10_B2)" /></td>
+                <td><input class="form-control" value="@Html.DisplayFor(model => model.Round_10_B2)" /></td>
+                <td><input class="form-control" value="@Html.DisplayFor(model => model.DeterminateFactor_R10)" /></td>
+            </tr>
+            <tr>
+                <td class="CenterTextColumn">11</td>
+                <td><input class="form-control" value="@Html.DisplayFor(model => model.Round_11_B2)" /></td>
+                <td><input class="form-control" value="@Html.DisplayFor(model => model.Round_11_B2)" /></td>
+                <td><input class="form-control" value="@Html.DisplayFor(model => model.DeterminateFactor_R11)" /></td>
+            </tr>
+            <tr>
+                <td class="CenterTextColumn">12</td>
+                <td><input class="form-control" value="@Html.DisplayFor(model => model.Round_12_B2)" /></td>
+                <td><input class="form-control" value="@Html.DisplayFor(model => model.Round_12_B2)" /></td>
+                <td><input class="form-control" value="@Html.DisplayFor(model => model.DeterminateFactor_R12)" /></td>
+            </tr>
+            <tr>
                 <td class="CenterTextColumn">Total</td>
+                <td><input class="form-control" value="@Html.DisplayFor(model => model.Total_B1)" /></td>
+
                 <td><input class="form-control" value="@Html.DisplayFor(model => model.Total_B2)" /></td>
             </tr>
         </table>

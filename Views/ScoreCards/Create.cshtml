@@ -26,6 +26,26 @@
             <label for="LastNameOnCard">Last name:</label>
             <input asp-for="LastNameOnCard " /><br><br>
 
+
+            <label for="scorecard">Name of fight?:</label> <!--need to send this data to the database, need to display the data, need to be able to display the scorecard-->
+            <select asp-for="FightId">
+                <option value="">MUST select one below >>></option>
+                <option value="1">Charlo v. Castano</option>
+            </select>
+            <br /><br />
+
+            <label for="scorecard">Boxer1's Name?:</label> <!--need to send this data to the database, need to display the data, need to be able to display the scorecard-->
+            <select asp-for="Boxer1">
+                <option value="">MUST select one below >>></option>
+                <option value="Charlo">Charlo</option>
+            </select>
+            <label for="scorecard">Boxer2's Name:</label> <!--need to send this data to the database, need to display the data, need to be able to display the scorecard-->
+            <select asp-for="Boxer2">
+                <option value="">MUST select one below >>></option>
+                <option value="Castano">Castano</option>
+            </select>
+            <br /><br />
+            <br /><br />
             <label for="DateCreated">Date I created this scorecard:</label>
             <input asp-for="DateCreated" /><br><br>
         </fieldset>
@@ -48,10 +68,11 @@
                     <td>
                         <label for="scorecard">Choose factor:</label> <!--need to send this data to the database, need to display the data, need to be able to display the scorecard-->
                         <select asp-for="DeterminateFactor_R1">
-                            <option value="Effective_Aggression">effective aggression</option>
+                            <option value="">MUST select one below >>></option>
+                            <option value="Effective Aggression">effective aggression</option>
                             <option value="Defense">defense</option>
-                            <option value="Clean_hard_punching">clean, hard punching</option>
-                            <option value="Ring_Generalship">ring generalship</option>
+                            <option value="Clean, Hard Punching">clean, hard punching</option>
+                            <option value="Ring Generalship">ring generalship</option>
                         </select>
                     </td>
 
@@ -63,11 +84,12 @@
                     <td><input asp-for="Round_2_B2" class="form-control" /></td>
                     <td>
                         <label for="scorecard">Choose factor:</label> <!--need to send this data to the database, need to display the data, need to be able to display the scorecard-->
-                        <select name="scorecard" id="1">
-                            <option value="Effective_Aggression">effective aggression</option>
+                        <select asp-for="DeterminateFactor_R2">
+                            <option value="">MUST select one below >>></option>
+                            <option value="Effective Aggression">effective aggression</option>
                             <option value="Defense">defense</option>
-                            <option value="Clean_hard_punching">clean, hard punching</option>
-                            <option value="Ring_Generalship">ring generalship</option>
+                            <option value="Clean, Hard Punching">clean, hard punching</option>
+                            <option value="Ring Generalship">ring generalship</option>
                         </select>
                     </td>
 
@@ -79,11 +101,12 @@
                     <td><input asp-for="Round_3_B2" class="form-control" /></td>
                     <td>
                         <label for="scorecard">Choose factor:</label> <!--need to send this data to the database, need to display the data, need to be able to display the scorecard-->
-                        <select name="scorecard" id="1">
-                            <option value="Effective_Aggression">effective aggression</option>
+                        <select asp-for="DeterminateFactor_R3">
+                            <option value="">MUST select one below >>></option>
+                            <option value="Effective Aggression">effective aggression</option>
                             <option value="Defense">defense</option>
-                            <option value="Clean_hard_punching">clean, hard punching</option>
-                            <option value="Ring_Generalship">ring generalship</option>
+                            <option value="Clean, Hard Punching">clean, hard punching</option>
+                            <option value="Ring Generalship">ring generalship</option>
                         </select>
                     </td>
 
@@ -95,11 +118,12 @@
                     <td><input asp-for="Round_4_B2" class="form-control" /></td>
                     <td>
                         <label for="scorecard">Choose factor:</label> <!--need to send this data to the database, need to display the data, need to be able to display the scorecard-->
-                        <select name="scorecard" id="1">
-                            <option value="Effective_Aggression">effective aggression</option>
+                        <select asp-for="DeterminateFactor_R4">
+                            <option value="">MUST select one below >>></option>
+                            <option value="Effective Aggression">effective aggression</option>
                             <option value="Defense">defense</option>
-                            <option value="Clean_hard_punching">clean, hard punching</option>
-                            <option value="Ring_Generalship">ring generalship</option>
+                            <option value="Clean, Hard Punching">clean, hard punching</option>
+                            <option value="Ring Generalship">ring generalship</option>
                         </select>
                     </td>
 
@@ -111,11 +135,12 @@
                     <td><input asp-for="Round_5_B2" class="form-control" /></td>
                     <td>
                         <label for="scorecard">Choose factor:</label> <!--need to send this data to the database, need to display the data, need to be able to display the scorecard-->
-                        <select name="scorecard" id="1">
-                            <option value="Effective_Aggression">effective aggression</option>
+                        <select asp-for="DeterminateFactor_R5">
+                            <option value="">MUST select one below >>></option>
+                            <option value="Effective Aggression">effective aggression</option>
                             <option value="Defense">defense</option>
-                            <option value="Clean_hard_punching">clean, hard punching</option>
-                            <option value="Ring_Generalship">ring generalship</option>
+                            <option value="Clean, Hard Punching">clean, hard punching</option>
+                            <option value="Ring Generalship">ring generalship</option>
                         </select>
                     </td>
 
@@ -128,11 +153,12 @@
                     <td><input asp-for="Round_6_B2" class="form-control" /></td>
                     <td>
                         <label for="scorecard">Choose factor:</label> <!--need to send this data to the database, need to display the data, need to be able to display the scorecard-->
-                        <select name="scorecard" id="1">
-                            <option value="Effective_Aggression">effective aggression</option>
+                        <select asp-for="DeterminateFactor_R6">
+                            <option value="">MUST select one below >>></option>
+                            <option value="Effective Aggression">effective aggression</option>
                             <option value="Defense">defense</option>
-                            <option value="Clean_hard_punching">clean, hard punching</option>
-                            <option value="Ring_Generalship">ring generalship</option>
+                            <option value="Clean, Hard Punching">clean, hard punching</option>
+                            <option value="Ring Generalship">ring generalship</option>
                         </select>
                     </td>
 
@@ -145,11 +171,12 @@
                     <td><input asp-for="Round_7_B2" class="form-control" /></td>
                     <td>
                         <label for="scorecard">Choose factor:</label> <!--need to send this data to the database, need to display the data, need to be able to display the scorecard-->
-                        <select name="scorecard" id="1">
-                            <option value="Effective_Aggression">effective aggression</option>
+                        <select asp-for="DeterminateFactor_R7">
+                            <option value="">MUST select one below >>></option>
+                            <option value="Effective Aggression">effective aggression</option>
                             <option value="Defense">defense</option>
-                            <option value="Clean_hard_punching">clean, hard punching</option>
-                            <option value="Ring_Generalship">ring generalship</option>
+                            <option value="Clean, Hard Punching">clean, hard punching</option>
+                            <option value="Ring Generalship">ring generalship</option>
                         </select>
                     </td>
 
@@ -161,11 +188,12 @@
                     <td><input asp-for="Round_8_B2" class="form-control" /></td>
                     <td>
                         <label for="scorecard">Choose factor:</label> <!--need to send this data to the database, need to display the data, need to be able to display the scorecard-->
-                        <select name="scorecard" id="1">
-                            <option value="Effective_Aggression">effective aggression</option>
+                        <select asp-for="DeterminateFactor_R8">
+                            <option value="">MUST select one below >>></option>
+                            <option value="Effective Aggression">effective aggression</option>
                             <option value="Defense">defense</option>
-                            <option value="Clean_hard_punching">clean, hard punching</option>
-                            <option value="Ring_Generalship">ring generalship</option>
+                            <option value="Clean, Hard Punching">clean, hard punching</option>
+                            <option value="Ring Generalship">ring generalship</option>
                         </select>
                     </td>
 
@@ -177,11 +205,12 @@
                     <td><input asp-for="Round_9_B2" class="form-control" /></td>
                     <td>
                         <label for="scorecard">Choose factor:</label> <!--need to send this data to the database, need to display the data, need to be able to display the scorecard-->
-                        <select name="scorecard" id="1">
-                            <option value="Effective_Aggression">effective aggression</option>
+                        <select asp-for="DeterminateFactor_R9">
+                            <option value="">MUST select one below >>></option>
+                            <option value="Effective Aggression">effective aggression</option>
                             <option value="Defense">defense</option>
-                            <option value="Clean_hard_punching">clean, hard punching</option>
-                            <option value="Ring_Generalship">ring generalship</option>
+                            <option value="Clean, Hard Punching">clean, hard punching</option>
+                            <option value="Ring Generalship">ring generalship</option>
                         </select>
                     </td>
 
@@ -193,11 +222,12 @@
                     <td><input asp-for="Round_10_B2" class="form-control" /></td>
                     <td>
                         <label for="scorecard">Choose factor:</label> <!--need to send this data to the database, need to display the data, need to be able to display the scorecard-->
-                        <select name="scorecard" id="1">
-                            <option value="Effective_Aggression">effective aggression</option>
+                        <select asp-for="DeterminateFactor_R10">
+                            <option value="">MUST select one below >>></option>
+                            <option value="Effective Aggression">effective aggression</option>
                             <option value="Defense">defense</option>
-                            <option value="Clean_hard_punching">clean, hard punching</option>
-                            <option value="Ring_Generalship">ring generalship</option>
+                            <option value="Clean, Hard Punching">clean, hard punching</option>
+                            <option value="Ring Generalship">ring generalship</option>
                         </select>
                     </td>
 
@@ -209,11 +239,12 @@
                     <td><input asp-for="Round_11_B2" class="form-control" /></td>
                     <td>
                         <label for="scorecard">Choose factor:</label> <!--need to send this data to the database, need to display the data, need to be able to display the scorecard-->
-                        <select name="scorecard" id="1">
-                            <option value="Effective_Aggression">effective aggression</option>
+                        <select asp-for="DeterminateFactor_R11">
+                            <option value="">MUST select one below >>></option>
+                            <option value="Effective Aggression">effective aggression</option>
                             <option value="Defense">defense</option>
-                            <option value="Clean_hard_punching">clean, hard punching</option>
-                            <option value="Ring_Generalship">ring generalship</option>
+                            <option value="Clean, Hard Punching">clean, hard punching</option>
+                            <option value="Ring Generalship">ring generalship</option>
                         </select>
                     </td>
 
@@ -225,11 +256,12 @@
                     <td><input asp-for="Round_12_B2" class="form-control" /></td>
                     <td>
                         <label for="scorecard">Choose factor:</label> <!--need to send this data to the database, need to display the data, need to be able to display the scorecard-->
-                        <select name="scorecard" id="1">
-                            <option value="Effective_Aggression">effective aggression</option>
+                        <select asp-for="DeterminateFactor_R12">
+                            <option value="">MUST select one below >>></option>
+                            <option value="Effective Aggression">effective aggression</option>
                             <option value="Defense">defense</option>
-                            <option value="Clean_hard_punching">clean, hard punching</option>
-                            <option value="Ring_Generalship">ring generalship</option>
+                            <option value="Clean, Hard Punching">clean, hard punching</option>
+                            <option value="Ring Generalship">ring generalship</option>
                         </select>
                     </td>
 
