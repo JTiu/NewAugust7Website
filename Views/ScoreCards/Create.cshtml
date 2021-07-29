@@ -26,27 +26,26 @@
             <label for="LastNameOnCard">Last name:</label>
             <input asp-for="LastNameOnCard " /><br><br>
 
-
-            <label for="scorecard">Name of fight?:</label> <!--need to send this data to the database, need to display the data, need to be able to display the scorecard-->
+            <legend>Fight Details & Names:</legend>
+            <label for="scorecard">Name of fight:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> <!--need to send this data to the database, need to display the data, need to be able to display the scorecard-->
             <select asp-for="FightId">
                 <option value="">MUST select one below >>></option>
                 <option value="1">Charlo v. Castano</option>
             </select>
-            <br /><br />
-
-            <label for="scorecard">Boxer1's Name?:</label> <!--need to send this data to the database, need to display the data, need to be able to display the scorecard-->
+            <br />
+            <label for="scorecard">Boxer1's Name is:</label>
             <select asp-for="Boxer1">
                 <option value="">MUST select one below >>></option>
                 <option value="Charlo">Charlo</option>
-            </select>
-            <label for="scorecard">Boxer2's Name:</label> <!--need to send this data to the database, need to display the data, need to be able to display the scorecard-->
+            </select><br />
+            <label for="scorecard">Boxer2's Name is:</label> <!--need to send this data to the database, need to display the data, need to be able to display the scorecard-->
             <select asp-for="Boxer2">
                 <option value="">MUST select one below >>></option>
                 <option value="Castano">Castano</option>
             </select>
-            <br /><br />
-            <br /><br />
-            <label for="DateCreated">Date I created this scorecard:</label>
+            <br />
+           
+            <label for="DateCreated">Today's Date:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
             <input asp-for="DateCreated" /><br><br>
         </fieldset>
         <!--this is where the form sends the info , if i need to check, view page source on the right click-->

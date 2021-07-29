@@ -1,6 +1,5 @@
 ﻿@model August7thWebsite.Models.ScoreCard
 
-
 <!--About view--><center>
     @{ ViewData["Title"] = "This is the completed scorecorecard, on the FinishedScorecard page!"; }
     <h2>@ViewData["Title"]</h2>
@@ -19,12 +18,12 @@
 <div class="picture" style=" background-color: #F20519; margin:20px; padding: 20px;  border: 10px dashed black; color: white; text-align:center">
 
 
-    
+
     <center>
         <div>
             <h2>
                 @Html.DisplayFor(model => model.FirstNameOnCard)
-                @Html.DisplayFor(model => model.LastNameOnCard)'s card'
+                @Html.DisplayFor(model => model.LastNameOnCard)'s card
             </h2>
             <br />
             Created: &nbsp;@Model.DateCreated.ToShortDateString()
@@ -132,10 +131,13 @@
             </tr>
         </table>
 
-        <h3> see others' scorecard</h3>
-        <a asp-action="Index">Back to List</a>
+
+
     </center>
 </div>
+<center>
+    <a asp-action="Index"> <h3> See Everyone's Scorecards</h3></a>
+</center>
 <br>
 
 
