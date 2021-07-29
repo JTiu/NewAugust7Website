@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using August7thWebsite.Data;
 using August7thWebsite.Models;
+using August7thWebsiteVS.Models;
+using System.Net.Http;
+using Newtonsoft.Json;
 
 namespace August7thWebsiteVS.Controllers
 {
@@ -43,54 +46,74 @@ namespace August7thWebsiteVS.Controllers
             return View(scoreCard);
         }
 
-        // GET: ScoreCards/Create
+        // GET: ScoreCards/create
         public IActionResult Create()
         {
-            return View();
+            CreateScorecardViewModel createScorecardViewModel = new CreateScorecardViewModel();
+            return View(createScorecardViewModel);
         }
 
         [HttpPost]
-        public IActionResult Create(ScoreCard newScoreCard)
+        public IActionResult Create(CreateScorecardViewModel newScoreCard, string create, string search)
         {
             try
             {
-                int total_B1 = 0;
-                int total_B2 = 0;
+                if (!string.IsNullOrEmpty(create))
+                {
+                    int total_B1 = 0;
+                    int total_B2 = 0;
 
-                total_B1 += newScoreCard.Round_1_B1;//here to work  Round_1_B2
-                total_B2 += newScoreCard.Round_1_B2;//here to work
-                total_B1 += newScoreCard.Round_2_B1;
-                total_B2 += newScoreCard.Round_2_B2;
-                total_B1 += newScoreCard.Round_3_B1;
-                total_B2 += newScoreCard.Round_3_B2;
-                total_B1 += newScoreCard.Round_4_B1;
-                total_B2 += newScoreCard.Round_4_B2;
-                total_B1 += newScoreCard.Round_5_B1;
-                total_B2 += newScoreCard.Round_5_B2;
-                total_B1 += newScoreCard.Round_6_B1;
-                total_B2 += newScoreCard.Round_6_B2;
-                total_B1 += newScoreCard.Round_7_B1;
-                total_B2 += newScoreCard.Round_7_B2;
-                total_B1 += newScoreCard.Round_8_B1;
-                total_B2 += newScoreCard.Round_8_B2;
-                total_B1 += newScoreCard.Round_9_B1;
-                total_B2 += newScoreCard.Round_9_B2;
-                total_B1 += newScoreCard.Round_10_B1;
-                total_B2 += newScoreCard.Round_10_B2;
-                total_B1 += newScoreCard.Round_11_B1;
-                total_B2 += newScoreCard.Round_11_B2;
-                total_B1 += newScoreCard.Round_12_B1;
-                total_B2 += newScoreCard.Round_12_B2;
+                    total_B1 += newScoreCard.Round_1_B1;//here to work  Round_1_B2
+                    total_B2 += newScoreCard.Round_1_B2;//here to work
+                    total_B1 += newScoreCard.Round_2_B1;
+                    total_B2 += newScoreCard.Round_2_B2;
+                    total_B1 += newScoreCard.Round_3_B1;
+                    total_B2 += newScoreCard.Round_3_B2;
+                    total_B1 += newScoreCard.Round_4_B1;
+                    total_B2 += newScoreCard.Round_4_B2;
+                    total_B1 += newScoreCard.Round_5_B1;
+                    total_B2 += newScoreCard.Round_5_B2;
+                    total_B1 += newScoreCard.Round_6_B1;
+                    total_B2 += newScoreCard.Round_6_B2;
+                    total_B1 += newScoreCard.Round_7_B1;
+                    total_B2 += newScoreCard.Round_7_B2;
+                    total_B1 += newScoreCard.Round_8_B1;
+                    total_B2 += newScoreCard.Round_8_B2;
+                    total_B1 += newScoreCard.Round_9_B1;
+                    total_B2 += newScoreCard.Round_9_B2;
+                    total_B1 += newScoreCard.Round_10_B1;
+                    total_B2 += newScoreCard.Round_10_B2;
+                    total_B1 += newScoreCard.Round_11_B1;
+                    total_B2 += newScoreCard.Round_11_B2;
+                    total_B1 += newScoreCard.Round_12_B1;
+                    total_B2 += newScoreCard.Round_12_B2;
 
-                newScoreCard.Total_B1 = total_B1;
-                newScoreCard.Total_B2 = total_B2;
+                    newScoreCard.Total_B1 = total_B1;
+                    newScoreCard.Total_B2 = total_B2;
 
-                _context.ScoreCards.Add(newScoreCard);
-                _context.SaveChanges();
-                int sid = newScoreCard.ScoreCardId;
-                return RedirectToAction(nameof(Finished), new { id = sid });//need to get the ID
-                //return RedirectToAction(nameof(BoxingMatchDialog));
-                //return RedirectToAction(nameof(CreateScorecard));
+                    _context.ScoreCards.Add(newScoreCard);
+                    _context.SaveChanges();
+                    int sid = newScoreCard.ScoreCardId;
+                    return RedirectToAction(nameof(Finished), new { id = sid });//need to get the ID
+                                                                                //return RedirectToAction(nameof(BoxingMatchDialog));
+                                                                                //return RedirectToAction(nameof(CreateScorecard));
+                }
+
+                if (!string.IsNullOrEmpty(search))
+                {
+                    string url = $"https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q={newScoreCard.Keyword}&key=AIzaSyCUx0W6QcVtK0pZ8V3tAYCmRnt9W3F0b-M";
+                    var client = new HttpClient();
+                    var response = client.GetAsync(url);
+                    if (response.Result.IsSuccessStatusCode)
+                    {
+                        var jsonResponse = response.Result.Content.ReadAsStringAsync().Result;                //Process information
+                        var searchResult = JsonConvert.DeserializeObject<SearchResult>(jsonResponse);
+                        List<string> videoSrcs = searchResult.items.Select(i => "https://www.youtube.com/embed/" + i.id.videoId + "?}autohide=1&autoplay =1").ToList();
+                        ViewBag.videoSrcs = videoSrcs;
+                    }
+                   
+                }
+                return View();
             }
             catch
             {

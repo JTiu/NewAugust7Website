@@ -1,4 +1,4 @@
-﻿@model August7thWebsite.Models.ScoreCard
+﻿@model August7thWebsiteVS.Models.CreateScorecardViewModel;
 @{
     ViewData["Title"] = "JudgeBout";
 }
@@ -28,7 +28,7 @@
 
             <legend>Fight Details & Names:</legend>
             <label for="scorecard">Name of fight:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> <!--need to send this data to the database, need to display the data, need to be able to display the scorecard-->
-            <select asp-for="FightId">
+            <select asp-for="FightName">
                 <option value="">MUST select one below >>></option>
                 <option value="1">Charlo v. Castano</option>
             </select>
@@ -44,12 +44,52 @@
                 <option value="Castano">Castano</option>
             </select>
             <br />
-           
+
             <label for="DateCreated">Today's Date:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
             <input asp-for="DateCreated" /><br><br>
         </fieldset>
+
+        <div>
+          
+
+                <div class="form-group">
+                    <label>
+
+                        Select your Own 12 Round Fight
+                    </label>
+                    <input asp-for="Keyword" />
+
+                    <input type="submit" name="search" value="Search" class="btn btn-primary" />
+
+                </div>
+
+           
+        </div>
+
+        @if (ViewBag.videoSrcs != null)
+        {
+            @foreach (var item in ((List<string>)ViewBag.videoSrcs))
+            {
+                <div class="video">
+                    <div style="width: 560px; height: 315px; float: none; clear: both; margin: 2px auto;">
+                        <embed src="@item"
+                               wmode="transparent"
+                               type="video/mp4"
+                               width="100%" height="100%"
+                               allow="autoplay; encrypted-media; picture-in-picture"
+                               allowfullscreen
+                               title="Search Results of your Keyword">
+                    </div>
+                    
+                   <input type="button" value="Select" class="selectVideo"/>
+                </div>
+            }
+
+
+        }
+
         <!--this is where the form sends the info , if i need to check, view page source on the right click-->
-        <input asp-for="FightId" type="hidden" value="@ViewBag.FightId" />
+        <input asp-for="FightName" type="hidden" value="@ViewBag.FightId" />
         <center>
             <table>
                 <tr>
@@ -268,15 +308,26 @@
             </table>
 
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" name="create"  value="Create" class="btn btn-primary" />
             </div>
         </center>
     </form>
 </div>
 
 <a asp-action="Index">Back to Home</a>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        $("input[class='selectVideo'").click(function () {
+           
+            $(this).parents('.video').prevAll('.video').remove();
+            $(this).parents('.video').nextAll('.video').remove();
 
-<script>
+        });
+    });
+    
+
+
     function myFunctionA() {
         var dots = document.getElementById("dots");
         var moreText = document.getElementById("moreA");

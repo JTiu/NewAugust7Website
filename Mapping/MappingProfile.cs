@@ -13,6 +13,7 @@ namespace August7thWebsiteVS.Mapping
         public MappingProfile()
         {
             CreateMap<Participant, ParticipantViewModel>();
+            CreateMap<ScoreCard, CreateScorecardViewModel>();
         }
 
     }

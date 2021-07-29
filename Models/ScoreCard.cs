@@ -7,7 +7,7 @@ namespace August7thWebsite.Models
     {  //web.config file needs the connection string
         [Key]
         public int ScoreCardId { get; set; }
-        public int FightId { get; set; }
+        public string FightName { get; set; }
         public string UserId { get; set; }
         public int Round_1_B1 { get; set; }
         public int Round_1_B2 { get; set; }
@@ -54,5 +54,9 @@ namespace August7thWebsite.Models
         public DateTime DateCreated { get; set; }
         public string Boxer1 { get; set; }
         public string Boxer2 { get; set; }
+        public ScoreCard()
+        {
+            DateCreated = DateTime.Today;
+        }
     }
 }
