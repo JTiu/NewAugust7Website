@@ -11,7 +11,7 @@
     }
 </style>
 
-<h1 style="text-align:center">This is the "Create" page</h1>
+<h1 style="text-align:center"><!--This is the "Create" page--></h1>
 <div class="picture" style=" background-color: #F20519; margin:20px; padding: 20px;  border: 10px dashed black; color: white; text-align:center">
 
     <h2>Your Boxing Scorecard</h2>
@@ -55,7 +55,7 @@
                 <div class="form-group">
                     <label>
 
-                        Select your Own 12 Round Fight
+                        <h5>Find the Charlo v. Castano Full Fight, then press 'Select' to elimate the other videos from the screen.<br /> *Do not play the video without pressing 'Select' first*</h5>
                     </label>
                     <input asp-for="Keyword" />
 
@@ -91,6 +91,8 @@
         <!--this is where the form sends the info , if i need to check, view page source on the right click-->
         <input asp-for="FightName" type="hidden" value="@ViewBag.FightId" />
         <center>
+            <h5>*Use 'Tab' key to advance to next 'input' box.  <br />Do not use the 'Enter' key to advance ('Enter' will reset the entire page)</h5>
+
             <table>
                 <tr>
 
@@ -308,7 +310,7 @@
             </table>
 
             <div class="form-group">
-                <input type="submit" name="create"  value="Create" class="btn btn-primary" />
+                <input type="submit" name="create" value="Create" class="btn btn-primary" />
             </div>
         </center>
     </form>
