@@ -3,8 +3,16 @@
     ViewData["Title"] = "JudgeBout";
 }
 
-
-
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("form").bind("keypress", function (e) {
+            if (e.keyCode == 13) {
+                return false;
+            }
+        });
+    });
+</script>
 <style>
     .CenterTextColumn {
         text-align: center
@@ -14,7 +22,7 @@
 <h1 style="text-align:center"><!--This is the "Create" page--></h1>
 <div class="picture" style=" background-color: #F20519; margin:20px; padding: 20px;  border: 10px dashed black; color: white; text-align:center">
 
-    <h2>Your Boxing Scorecard</h2>
+    <h2>Your Honest Boxing Scorecard</h2><!--added script below-->
     
 
     <hr />
@@ -30,18 +38,18 @@
             <label for="scorecard">Name of fight:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> <!--need to send this data to the database, need to display the data, need to be able to display the scorecard-->
             <select asp-for="FightName">
                 <option value="">MUST select one below >>></option>
-                <option value="1">Charlo v. Castano</option>
+                <option value="1">Fox v Maestre</option>
             </select>
             <br />
             <label for="scorecard">Boxer1's Name is:</label>
             <select asp-for="Boxer1">
                 <option value="">MUST select one below >>></option>
-                <option value="Charlo">Charlo</option>
+                <option value="Fox">Fox</option>
             </select><br />
             <label for="scorecard">Boxer2's Name is:</label> <!--need to send this data to the database, need to display the data, need to be able to display the scorecard-->
             <select asp-for="Boxer2">
                 <option value="">MUST select one below >>></option>
-                <option value="Castano">Castano</option>
+                <option value="Maestre">Maestre</option>
             </select>
             <br />
 
@@ -50,20 +58,20 @@
         </fieldset>
 
         <div>
-          
 
-                <div class="form-group">
-                    <label>
 
-                        <h5>Find the Charlo v. Castano Full Fight, then press 'Select' to elimate the other videos from the screen.<br /> *Do not play the video without pressing 'Select' first*</h5>
-                    </label>
-                    <input asp-for="Keyword" />
+            <div class="form-group">
+                <label>
 
-                    <input type="submit" name="search" value="Search" class="btn btn-primary" />
+                    <h5>Find the Full Fight, then press 'Select' to elimate the other videos from the screen.<br /> *Do not play the video without pressing 'Select' first*</h5>
+                </label>
+                <input asp-for="Keyword" />
 
-                </div>
+                <input type="submit" name="search" value="Search" class="btn btn-primary" />
 
-           
+            </div>
+
+
         </div>
 
         @if (ViewBag.videoSrcs != null)
@@ -80,8 +88,8 @@
                                allowfullscreen
                                title="Search Results of your Keyword">
                     </div>
-                    
-                   <input type="button" value="Select" class="selectVideo"/>
+
+                    <input type="button" value="Select" class="selectVideo" />
                 </div>
             }
 
@@ -321,13 +329,13 @@
 <script type="text/javascript">
     jQuery(document).ready(function () {
         $("input[class='selectVideo'").click(function () {
-           
+
             $(this).parents('.video').prevAll('.video').remove();
             $(this).parents('.video').nextAll('.video').remove();
 
         });
     });
-    
+
 
 
     function myFunctionA() {
