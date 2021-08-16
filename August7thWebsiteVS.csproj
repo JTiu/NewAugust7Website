@@ -44,6 +44,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\AudioFiles\manna&amp;Holiday.m4a" />
     <None Include="wwwroot\Images\JT_Judge.PNG" />
   </ItemGroup>
 
